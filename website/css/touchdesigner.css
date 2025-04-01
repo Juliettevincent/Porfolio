@@ -1,0 +1,19 @@
+body {
+    background-color: black;
+}
+
+#introduction {
+    color: rgb(55, 0, 122);
+    font-size: 24px;
+    text-align: center;
+}
+
+p {
+    color: wheat;
+    text-align: center;
+}
+
+video {
+    display: block;
+    margin: auto;
+}

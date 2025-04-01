@@ -1,0 +1,55 @@
+body {
+    background-color: black;
+}
+
+h1 {
+    color: rgb(55, 0, 122);
+    text-align: center;
+}
+
+.description {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 900px;
+    margin: auto;
+}
+
+.description p {
+    max-width: 700px;
+    /* Limite la largeur du texte */
+    text-align: justify;
+    /* Justifie le texte pour un rendu propre */
+    color: wheat;
+}
+
+.description img {
+    width: 300px;
+    /* Garde une taille fixe pour l'image */
+    height: auto;
+    /* Garde les proportions originales */
+}
+
+
+.gallerie {
+    display: flex;
+    justify-content: center;
+    /* Centers the row of images */
+    gap: 10px;
+    /* Adds space between images */
+}
+
+.gallerie-below {
+    display: flex;
+    justify-content: center;
+    /* Centers the row of images */
+    gap: 10px;
+    /* Adds space between images */
+}
+
+p {
+    text-align: center;
+    color: wheat;
+    font-size: 20px;
+}
