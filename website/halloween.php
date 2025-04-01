@@ -15,8 +15,7 @@
     <div><img src="../images/projet.png" width="520" height="auto"></img></div>
     </div>
     <div class="description">
-    <p>Le projet consistait d'une scène Unity 3d projetée sur un mur.
-        Ce projet consistait à installer une caméra et un projecteur, coder un script de détection de mouvement dans Unity, ainsi que mettre en place une scène 3d
+    <p>Ce projet consistait à installer une caméra et un projecteur, coder un script de détection de mouvement dans Unity, ainsi que mettre en place une scène 3d
         dans Unity. Grâce à mon code, la caméra détectait la présence des personnes et démarrait un compte à rebours avant de prendre une
         photo qui était ensuite sauvegardée dans un fichier. L'image de la caméra était intégrée dans la scène 3D, affichée sur une tombe, le tout,
         projeté sur un mur. Mon but était de faire réagir mes invitées en leur donnant une atmosphère épeurante, mais à la fois humoristique dès
