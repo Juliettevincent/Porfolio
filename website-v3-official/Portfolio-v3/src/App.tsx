@@ -11,6 +11,7 @@ import "@fontsource/space-mono/700.css";
 import "./App.css";
 import bgImage from "./assets/background portfolio.jpg";
 import culte2026Fin from "./assets/culte_2026_financement.jpg"
+import bgEnter from "./assets/background-enter.jpg";
 
 // ---------------------------------------------------------------------------
 // DONNÉES DES PROJETS
@@ -106,9 +107,7 @@ const PROJECTS: Project[] = [
 // motif de fond généré (placeholder) — purement décoratif tant qu'il n'y a pas de vraie image
 function placeholderGradient(hue: string): string {
   return `
-    radial-gradient(120% 90% at 20% 15%, hsla(${hue}, 0.9) 0%, transparent 55%),
-    radial-gradient(90% 70% at 85% 80%, hsla(${hue}, 0.55) 0%, transparent 60%),
-    linear-gradient(160deg, hsl(${hue}) 0%, hsl(${hue.split(",")[0]}, 25%, 12%) 100%)
+    
   `;
 }
 
@@ -198,7 +197,10 @@ function App() {
       )}
 
       {view === "gallery" && (
-        <div className="gallery">
+        <div className="gallery"
+        style={{
+          backgroundImage: `url(${bgEnter})`,
+        }}>
           <Spores count={14} />
           <div className="gallery-header">
             <span className="gallery-title">Juliette Vincent</span>

@@ -138,8 +138,13 @@ a {
   position: relative;
   z-index: 1;
   min-height: 100vh;
-  background: var(--plum);
+  background-color: var(--plum);
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   padding: 3rem 1.5rem 5rem;
+
 }
 .gallery-header {
   display: flex;
