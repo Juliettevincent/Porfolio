@@ -12,6 +12,10 @@ import "./App.css";
 import bgImage from "./assets/background portfolio.jpg";
 import culte2026Fin from "./assets/culte_2026_financement.jpg"
 import bgEnter from "./assets/background-enter.jpg";
+import lesdelices from "./assets/lesdelices.jpg"
+import finger from "./assets/finger 2.jpg"
+import recursif from "./assets/recursif.jpg"
+import colo from "./assets/le_coloriage_2.jpg"
 
 // ---------------------------------------------------------------------------
 // DONNÉES DES PROJETS
@@ -37,17 +41,6 @@ type View = "landing" | "gallery" | "detail";
 
 const PROJECTS: Project[] = [
   {
-    slug: "Site web",
-    title: "Site web",
-    year: "2021",
-    medium: "Wix, grpahisme",
-    span: "tall",
-    hue: "38, 30%, 78%",
-    blurb:
-      "Creation d'un site web pour la compagnie Les Delices de Nonna",
-    image: null,
-  },
-  {
     slug: "Le coloriage",
     title: "Le coloriage",
     year: "2026",
@@ -56,7 +49,7 @@ const PROJECTS: Project[] = [
     hue: "165, 45%, 55%",
     blurb:
       "Creation de visuels en temps reel pour un spectacle au quaie des brumes.",
-    image: null,
+    image: colo,
   },
   {
     slug: "Finger",
@@ -67,7 +60,7 @@ const PROJECTS: Project[] = [
     hue: "42, 70%, 62%",
     blurb:
       "Perfomance en temps reel avec un clavier MIDI pour ",
-    image: null,
+    image: finger,
   },
   {
     slug: "Visuels culte 2025",
@@ -92,15 +85,26 @@ const PROJECTS: Project[] = [
     image: culte2026Fin,
   },
   {
-    slug: "Projet avec mirco",
-    title: "Projet avec mirco",
+    slug: "Recursif",
+    title: "Recursif",
     year: "2026",
     medium: "Ableton, Touchdesigner, photos et videos",
     span: "regular",
     hue: "355, 55%, 32%",
     blurb:
       "Travail dans Ableton qui genere des visuels dans Touchdesigner, generatif",
-    image: null,
+    image: recursif,
+  },
+   {
+    slug: "Website",
+    title: "Website",
+    year: "2021",
+    medium: "Wix, grpahisme",
+    span: "tall",
+    hue: "38, 30%, 78%",
+    blurb:
+      "Creation d'un site web pour la compagnie Les Delices de Nonna",
+    image: lesdelices,
   },
 ];
 
@@ -255,11 +259,6 @@ function App() {
               d'exposition, matériaux, dimensions, crédits photo — pour
               remplacer ce paragraphe d'exemple.
             </p>
-            <div className="detail-note">
-              Remplace `image: null` par l'URL (ou l'import) de ta photo dans
-              PROJECTS pour afficher tes vraies images ici et dans la
-              galerie.
-            </div>
           </div>
         </div>
       )}
