@@ -184,12 +184,12 @@ function App() {
           }}
         >
           <Spores count={22} />
-          <div className="landing-eyebrow">Anywhere but within</div>
+          {/* <div className="landing-eyebrow">Anywhere but within</div> */}
           <h1 className="landing-name">Juliette Vincent</h1>
-          <div className="landing-rule" />
-          <p className="landing-tagline">
+          {/* <div className="landing-rule" /> */}
+          {/* <p className="landing-tagline">
             Real time visuals and audioreactive experiences
-          </p>
+          </p> */}
           <button className="enter-btn" onClick={goGallery}>
             Enter
           </button>
