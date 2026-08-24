@@ -105,7 +105,7 @@ const PROJECTS: Project[] = [
 ];
 
 // motif de fond généré (placeholder) — purement décoratif tant qu'il n'y a pas de vraie image
-function placeholderGradient(hue: string): string {
+function placeholderGradient(): string {
   return `
     
   `;
@@ -216,7 +216,7 @@ function App() {
                 style={{
                   backgroundImage: p.image
                     ? `url(${p.image})`
-                    : placeholderGradient(p.hue),
+                    : placeholderGradient(),
                 }}
                 onClick={() => openProject(p)}
               >
@@ -236,7 +236,7 @@ function App() {
             style={{
               backgroundImage: active.image
                 ? `url(${active.image})`
-                : placeholderGradient(active.hue),
+                : placeholderGradient(),
             }}
           >
             <button className="back-btn" onClick={backToGallery}>
