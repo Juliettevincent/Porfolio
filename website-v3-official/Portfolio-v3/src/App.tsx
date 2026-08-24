@@ -16,6 +16,7 @@ import lesdelices from "./assets/lesdelices.jpg"
 import finger from "./assets/finger 2.jpg"
 import recursif from "./assets/recursif.jpg"
 import colo from "./assets/le_coloriage_2.jpg"
+import culte2025 from "./assets/culte2025.jpg"
 
 // ---------------------------------------------------------------------------
 // DONNÉES DES PROJETS
@@ -44,51 +45,51 @@ const PROJECTS: Project[] = [
     slug: "Le coloriage",
     title: "Le coloriage",
     year: "2026",
-    medium: "Stop motion, photographie, touchdesigner",
+    medium: "July 30th 2026 ; Photography, Stop motion, Touchdesigner, MIDI Keyboard",
     span: "wide",
     hue: "165, 45%, 55%",
     blurb:
-      "Creation de visuels en temps reel pour un spectacle au quaie des brumes.",
+      "Real time visuals made for a punk show at Quaie des brumes in collaboration with another visual artist (for the clay animations). Use of a MIDI keyboard for rendering different visuals for each song.",
     image: colo,
   },
   {
     slug: "Finger",
-    title: "Visuels : Finger",
-    year: "2025",
-    medium: "Touchdesigner, MIDI keyboard",
+    title: "Finger",
+    year: "2026",
+    medium: "April 3rd 2026 ; Touchdesigner & MIDI keyboard",
     span: "tall",
     hue: "42, 70%, 62%",
     blurb:
-      "Perfomance en temps reel avec un clavier MIDI pour ",
+      "Live perfomance of my visuals accompanied by the song Finger by Ty Segall, a work made in class.",
     image: finger,
   },
   {
     slug: "Visuels culte 2025",
     title: "Le culte : 2025",
     year: "2025",
-    medium: "Touchdesigner, kinect",
+    medium: "Touchdesigner & kinect",
     span: "regular",
     hue: "45, 35%, 82%",
     blurb:
-      "Lancement 2025 du magazine le culte, visuels avec une kinect en temps reel",
-    image: null,
+      "Launch of the 2025 edition of the magazine Le culte. Use of touchdesigner, python and a kinect for rendering real time visuals.",
+    image: culte2025,
   },
   {
     slug: "Visuels culte 2026",
     title: "Le culte : 2026",
     year: "2026",
-    medium: "Performance, prothèses, résine",
+    medium: "Touchdesigner & PS3 controller",
     span: "wide",
     hue: "18, 40%, 68%",
     blurb:
-      "Financement & lancement du magazine le culte, visuels programmable avec une manette de ps3",
+      "Funding and launch of the 2026 edition of the magazine Le culte. Use of touchdesigner, python and a PS3 controller for rendering real time visuals.",
     image: culte2026Fin,
   },
   {
     slug: "Recursif",
     title: "Recursif",
     year: "2026",
-    medium: "Ableton, Touchdesigner, photos et videos",
+    medium: "Ableton, Touchdesigner, photos & videos",
     span: "regular",
     hue: "355, 55%, 32%",
     blurb:
@@ -99,7 +100,7 @@ const PROJECTS: Project[] = [
     slug: "Website",
     title: "Website",
     year: "2021",
-    medium: "Wix, grpahisme",
+    medium: "Wix, graphisme",
     span: "tall",
     hue: "38, 30%, 78%",
     blurb:
@@ -254,11 +255,6 @@ function App() {
               <span>{active.medium}</span>
             </div>
             <p className="detail-text">{active.blurb}</p>
-            <p className="detail-text">
-              Ajoute ici le texte complet du projet — démarche, contexte
-              d'exposition, matériaux, dimensions, crédits photo — pour
-              remplacer ce paragraphe d'exemple.
-            </p>
           </div>
         </div>
       )}
