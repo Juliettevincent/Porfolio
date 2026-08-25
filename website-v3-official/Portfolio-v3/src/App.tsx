@@ -17,6 +17,13 @@ import finger from "./assets/finger 2.jpg"
 import recursif from "./assets/recursif.jpg"
 import colo from "./assets/le_coloriage_2.jpg"
 import culte2025 from "./assets/culte2025.jpg"
+import photography from "./assets/Screenshot 2026-08-24 205330.png";
+
+// icones resaux sociaux
+import igIcon from "./assets/icons8-instagram-96.png";
+import soundcloud from "./assets/icons8-soundcloud-500.png";
+import dropbox from "./assets/icons8-dropbox-500.png";
+import linkedin from "./assets/icons8-linkedin-480.png";
 
 // ---------------------------------------------------------------------------
 // DONNÉES DES PROJETS
@@ -30,82 +37,122 @@ type Span = "tall" | "wide" | "regular";
 interface Project {
   slug: string;
   title: string;
-  year: string;
   medium: string;
   span: Span;
   hue: string;
   blurb: string;
   image: string | null;
+  link : string;
 }
 
 type View = "landing" | "gallery" | "detail";
+
+const SOCIALS: { label: string; url: string; icon: string }[] = [
+  { label: "Instagram", url: "https://www.instagram.com/juliettevincent_", icon: igIcon },
+  { label: "SoundCloud", url: "https://soundcloud.com/user-569426431", icon: soundcloud },
+  { label: "LinkedIn", url: "https://ca.linkedin.com/in/juliette-vincent-84022a22b", icon: linkedin },
+  { label: "Dropbox", url: "https://www.dropbox.com/scl/fo/qzlnclp4etg0zznw50ba7/AAmiRercapl4BaJsIGF-moc?rlkey=s5vvj92r7m0oxqzwwc3ltxn6h&st=szqx4vtt&dl=0", icon: dropbox },
+]; 
 
 const PROJECTS: Project[] = [
   {
     slug: "Le coloriage",
     title: "Le coloriage",
-    year: "2026",
     medium: "July 30th 2026 ; Photography, Stop motion, Touchdesigner, MIDI Keyboard",
     span: "wide",
     hue: "165, 45%, 55%",
     blurb:
       "Real time visuals made for a punk show at Quaie des brumes in collaboration with another visual artist (for the clay animations). Use of a MIDI keyboard for rendering different visuals for each song.",
     image: colo,
+    link: "",
+  },
+  {
+    slug: "Photography",
+    title: "Photography",
+    medium: "",
+    span: "wide",
+    hue: "165, 45%, 55%",
+    blurb:
+      "",
+    image: photography,
+    link: "",
   },
   {
     slug: "Finger",
     title: "Finger",
-    year: "2026",
     medium: "April 3rd 2026 ; Touchdesigner & MIDI keyboard",
     span: "tall",
     hue: "42, 70%, 62%",
     blurb:
       "Live perfomance of my visuals accompanied by the song Finger by Ty Segall, a work made in class.",
     image: finger,
+    link: "",
   },
   {
     slug: "Visuels culte 2025",
     title: "Le culte : 2025",
-    year: "2025",
     medium: "Touchdesigner & kinect",
     span: "regular",
     hue: "45, 35%, 82%",
     blurb:
       "Launch of the 2025 edition of the magazine Le culte. Use of touchdesigner, python and a kinect for rendering real time visuals.",
     image: culte2025,
+    link : "",
   },
   {
     slug: "Visuels culte 2026",
     title: "Le culte : 2026",
-    year: "2026",
     medium: "Touchdesigner & PS3 controller",
     span: "wide",
     hue: "18, 40%, 68%",
     blurb:
       "Funding and launch of the 2026 edition of the magazine Le culte. Use of touchdesigner, python and a PS3 controller for rendering real time visuals.",
     image: culte2026Fin,
+    link : "",
   },
   {
     slug: "Recursif",
     title: "Recursif",
-    year: "2026",
     medium: "Ableton, Touchdesigner, photos & videos",
     span: "regular",
     hue: "355, 55%, 32%",
     blurb:
       "Travail dans Ableton qui genere des visuels dans Touchdesigner, generatif",
     image: recursif,
+    link : "",
   },
    {
     slug: "Website",
     title: "Website",
-    year: "2021",
     medium: "Wix, graphisme",
     span: "tall",
     hue: "38, 30%, 78%",
     blurb:
       "Creation d'un site web pour la compagnie Les Delices de Nonna",
     image: lesdelices,
+    link : "https://lesdelicesdenonna.com",
+  },
+  {
+    slug: "Histoire Sans Paroles",
+    title: "Histoire Sans Paroles",
+    medium: "Unity, C#, Wwise",
+    span: "tall",
+    hue: "38, 30%, 78%",
+    blurb:
+      "Team-based project made with the software Unity where we created an immersive 3D procedural environment.",
+    image: null,
+    link : "",
+  },
+    {
+    slug: "Paintings",
+    title: "Paintings",
+    medium: "Acrylic",
+    span: "tall",
+    hue: "38, 30%, 78%",
+    blurb:
+      "Team-based project made with the software Unity where we created an immersive 3D procedural environment.",
+    image: null,
+    link : "",
   },
 ];
 
@@ -198,6 +245,20 @@ function App() {
           <button className="enter-btn" onClick={goGallery}>
             Enter
           </button>
+          <div className="social-row">
+            {SOCIALS.map((s) => (
+            <a
+              key={s.label}
+              className="social-link"
+              href={s.url}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={s.label}
+            >
+            <img src={s.icon} alt="" />
+            </a>
+            ))}
+        </div>
         </div>
       )}
 
@@ -225,7 +286,6 @@ function App() {
                 }}
                 onClick={() => openProject(p)}
               >
-                <span className="card-meta">{p.year}</span>
                 <span className="card-overlay" />
                 <span className="card-title">{p.title}</span>
               </button>
@@ -251,11 +311,16 @@ function App() {
           </div>
           <div className="detail-body">
             <div className="detail-meta">
-              <span>{active.year}</span>
               <span>{active.medium}</span>
             </div>
             <p className="detail-text">{active.blurb}</p>
+                        <p className="detail-text">
+            </p>
+            <div className="detail-note">
+              {active.link}
+            </div>
           </div>
+          
         </div>
       )}
     </div>
