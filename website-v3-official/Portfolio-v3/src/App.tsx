@@ -279,6 +279,7 @@ function App() {
               <button
                 key={p.slug}
                 className={`card ${p.span}`}
+                
                 style={{
                   backgroundImage: p.image
                     ? `url(${p.image})`
